@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f6f6f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="ETH Monitor">
+<title>ETH Monitor</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="manifest" href="./manifest.json">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f6f4;
+    --surface: #ffffff;
+    --surface-2: #f1f1ee;
+    --border: #e3e2dd;
+    --text: #0b0b0b;
+    --text-2: #52514e;
+    --muted: #7c7b75;
+    --accent: #2a78d6;
+    --accent-soft: rgba(42,120,214,0.10);
+    --good: #0ca30c;
+    --good-text: #006300;
+    --good-soft: rgba(12,163,12,0.10);
+    --bad: #d03b3b;
+    --bad-text: #b02a2a;
+    --bad-soft: rgba(208,59,59,0.10);
+    --warn: #fab219;
+    --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.04);
+    --radius: 14px;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #111110; --surface: #1a1a19; --surface-2: #232321; --border: #33332f;
+      --text: #ffffff; --text-2: #c3c2b7; --muted: #8f8e86;
+      --accent: #3987e5; --accent-soft: rgba(57,135,229,0.16);
+      --good-text: #3fc43f; --good-soft: rgba(12,163,12,0.18);
+      --bad: #e25252; --bad-text: #ff7a7a; --bad-soft: rgba(226,82,82,0.16);
+      --shadow: none; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #111110; --surface: #1a1a19; --surface-2: #232321; --border: #33332f;
+    --text: #ffffff; --text-2: #c3c2b7; --muted: #8f8e86;
+    --accent: #3987e5; --accent-soft: rgba(57,135,229,0.16);
+    --good-text: #3fc43f; --good-soft: rgba(12,163,12,0.18);
+    --bad: #e25252; --bad-text: #ff7a7a; --bad-soft: rgba(226,82,82,0.16);
+    --shadow: none; color-scheme: dark;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 14px; line-height: 1.45;
+    font-variant-numeric: tabular-nums;
+    min-height: 100vh; padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+  button { font: inherit; color: inherit; cursor: pointer; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+
+  /* ── Top bar ── */
+  .topbar {
+    position: sticky; top: 0; z-index: 40;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding-top: env(safe-area-inset-top);
+  }
+  .topbar-inner {
+    max-width: 1120px; margin: 0 auto; padding: 12px 16px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .brand { white-space: nowrap; display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 16px; }
+  .brand-mark {
+    width: 30px; height: 30px; border-radius: 8px; background: var(--accent); color: #fff;
+    display: grid; place-items: center; font-size: 15px;
+  }
+  .status-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; color: var(--text-2); background: var(--surface);
+    border: 1px solid var(--border); border-radius: 99px; padding: 4px 10px;
+  }
+  .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--good); }
+  .status-pill.demo .status-dot { background: var(--warn); }
+  .status-pill.off .status-dot { background: var(--bad); }
+  .spacer { flex: 1; }
+  .status-pill { white-space: nowrap; }
+  @media (max-width: 480px) {
+    .topbar-inner { gap: 8px; }
+    .brand-name { display: none; }
+    .status-pill { font-size: 11.5px; }
+    .segmented.full-sm { display: flex; width: 100%; }
+    .segmented.full-sm button { flex: 1; padding: 7px 4px; }
+  }
+  .icon-btn {
+    min-width: 40px; height: 40px; border-radius: 10px; border: 1px solid var(--border);
+    background: var(--surface); display: inline-grid; place-items: center; font-size: 17px; padding: 0 10px;
+  }
+  .icon-btn.text { font-size: 13px; font-weight: 600; }
+
+  /* ── Layout ── */
+  .page { max-width: 1120px; margin: 0 auto; padding: 16px; display: grid; gap: 16px; }
+  @media (min-width: 900px) {
+    .page { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); align-items: start; }
+    .col-right { position: sticky; top: 76px; }
+  }
+  .col { display: grid; gap: 16px; min-width: 0; }
+  .card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    box-shadow: var(--shadow); padding: 18px;
+  }
+  .eyebrow { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  h2 { font-size: 16px; font-weight: 700; }
+
+  /* ── Notification CTA ── */
+  .notif-cta {
+    display: none; align-items: center; gap: 12px;
+    background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+    border-radius: var(--radius); padding: 14px 16px;
+  }
+  .notif-cta.show { display: flex; }
+  .notif-cta p { flex: 1; font-size: 13px; color: var(--text); }
+  .notif-cta strong { display: block; font-size: 14px; }
+  .btn {
+    border: none; border-radius: 10px; padding: 10px 16px; font-weight: 600; font-size: 14px;
+    min-height: 42px; white-space: nowrap;
+  }
+  .btn-primary { background: var(--accent); color: #fff; }
+  .btn-secondary { background: var(--surface-2); color: var(--text); border: 1px solid var(--border); }
+  .btn-ghost { background: none; color: var(--text-2); padding: 8px 10px; min-height: 36px; font-size: 13px; }
+  .btn-danger-ghost { background: none; color: var(--bad-text); padding: 8px 10px; min-height: 36px; font-size: 13px; }
+  .btn:disabled { opacity: .45; cursor: not-allowed; }
+
+  /* ── Hero ── */
+  .hero-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 6px; }
+  .hero-price { font-size: clamp(34px, 7vw, 46px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+  .hero-sub { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 8px; color: var(--text-2); font-size: 13px; }
+  .delta {
+    display: inline-flex; align-items: center; gap: 4px; font-weight: 600; font-size: 13px;
+    padding: 3px 9px; border-radius: 99px;
+  }
+  .delta.up { color: var(--good-text); background: var(--good-soft); }
+  .delta.down { color: var(--bad-text); background: var(--bad-soft); }
+  .delta.flat { color: var(--text-2); background: var(--surface-2); }
+  .summary {
+    margin-top: 14px; padding: 12px 14px; border-radius: 10px; background: var(--surface-2);
+    font-size: 13.5px; color: var(--text); line-height: 1.55;
+  }
+  .summary b { font-weight: 600; }
+
+  /* ── Period + KPIs ── */
+  .period-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+  .segmented {
+    display: inline-flex; background: var(--surface-2); border: 1px solid var(--border);
+    border-radius: 10px; padding: 3px; gap: 2px;
+  }
+  .segmented button {
+    border: none; background: none; border-radius: 8px; padding: 7px 14px; font-size: 13px; font-weight: 600;
+    color: var(--text-2); min-height: 34px;
+  }
+  .segmented button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: 0 1px 2px rgba(0,0,0,.08); }
+  .kpis { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin-bottom: 16px; }
+  @media (min-width: 560px) { .kpis { grid-template-columns: repeat(4, minmax(0,1fr)); } }
+  .kpi { background: var(--surface-2); border-radius: 10px; padding: 11px 12px; min-width: 0; }
+  .kpi-label { font-size: 11.5px; color: var(--muted); font-weight: 500; }
+  .kpi-value { font-size: 16px; font-weight: 700; margin-top: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .kpi-value.up { color: var(--good-text); }
+  .kpi-value.down { color: var(--bad-text); }
+  .kpi-hint { font-size: 11px; color: var(--muted); margin-top: 1px; }
+
+  /* ── Chart ── */
+  .chart-wrap { position: relative; }
+  #chart { width: 100%; height: 220px; display: block; touch-action: pan-y; }
+  @media (min-width: 900px) { #chart { height: 280px; } }
+  .chart-x { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); margin-top: 6px; padding-left: 52px; }
+  .chart-legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--text-2); margin-top: 12px; }
+  .lg { display: inline-flex; align-items: center; gap: 6px; }
+  .lg-line { width: 18px; height: 2px; background: var(--accent); border-radius: 2px; }
+  .lg-dash { width: 18px; height: 0; border-top: 2px dashed var(--text-2); }
+  #tooltip {
+    position: absolute; pointer-events: none; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 7px 10px; font-size: 12px; box-shadow: 0 6px 20px rgba(0,0,0,.14);
+    opacity: 0; transition: opacity .1s; white-space: nowrap; z-index: 5;
+  }
+  #tooltip.visible { opacity: 1; }
+  #tooltip .tt-v { font-weight: 700; font-size: 13px; }
+  #tooltip .tt-t { color: var(--muted); font-size: 11px; }
+
+  /* ── Alerts ── */
+  .alerts-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 4px; }
+  .alerts-counts { font-size: 12.5px; color: var(--text-2); margin-bottom: 14px; }
+  .alert-list { display: grid; gap: 10px; }
+  .alert {
+    border: 1px solid var(--border); border-radius: 12px; padding: 13px 14px; background: var(--surface);
+  }
+  .alert.done { background: var(--surface-2); }
+  .alert-row { display: flex; align-items: flex-start; gap: 10px; }
+  .alert-icon {
+    width: 32px; height: 32px; border-radius: 9px; flex-shrink: 0; display: grid; place-items: center;
+    font-weight: 700; font-size: 15px;
+  }
+  .alert-icon.up { background: var(--good-soft); color: var(--good-text); }
+  .alert-icon.down { background: var(--bad-soft); color: var(--bad-text); }
+  .alert-icon.range { background: var(--accent-soft); color: var(--accent); }
+  .alert-main { flex: 1; min-width: 0; }
+  .alert-title { font-size: 13px; color: var(--text-2); font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .alert-value { font-size: 16px; font-weight: 700; margin-top: 1px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600;
+    padding: 3px 8px; border-radius: 99px; white-space: nowrap; flex-shrink: 0;
+  }
+  .chip.active { background: var(--accent-soft); color: var(--accent); }
+  .chip.hit-up { background: var(--good-soft); color: var(--good-text); }
+  .chip.hit-down { background: var(--bad-soft); color: var(--bad-text); }
+  .progress { height: 6px; border-radius: 99px; background: var(--surface-2); margin: 11px 0 6px; overflow: hidden; }
+  .alert.done .progress { display: none; }
+  .progress > span { display: block; height: 100%; border-radius: 99px; background: var(--accent); transition: width .4s; }
+  .alert-meta { font-size: 12px; color: var(--text-2); }
+  .alert-actions { display: flex; justify-content: flex-end; gap: 4px; margin-top: 2px; margin-bottom: -8px; margin-right: -8px; }
+  .alert-actions .btn { min-height: 32px; padding: 6px 8px; }
+  .empty {
+    text-align: center; padding: 24px 12px; color: var(--text-2); font-size: 13px;
+    border: 1px dashed var(--border); border-radius: 12px;
+  }
+  .empty strong { display: block; color: var(--text); font-size: 14px; margin-bottom: 4px; }
+
+  /* ── Dialogs ── */
+  dialog {
+    border: none; padding: 0; background: var(--surface); color: var(--text);
+    width: min(480px, 100%); max-height: 92vh; border-radius: 18px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.3);
+  }
+  dialog::backdrop { background: rgba(0,0,0,.45); }
+  @media (max-width: 560px) {
+    dialog { margin: auto 0 0; width: 100%; max-width: 100%; border-radius: 18px 18px 0 0; padding-bottom: env(safe-area-inset-bottom); }
+  }
+  .dlg-head { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px 6px; }
+  .dlg-body { padding: 8px 18px 18px; display: grid; gap: 14px; }
+  .field label, .field .label { display: block; font-size: 12.5px; font-weight: 600; color: var(--text-2); margin-bottom: 6px; }
+  .input-wrap { position: relative; }
+  .input-prefix { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--muted); font-weight: 600; font-size: 14px; }
+  .input {
+    width: 100%; min-height: 46px; padding: 11px 12px; border-radius: 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text); font: inherit; font-size: 16px; font-variant-numeric: tabular-nums;
+  }
+  .input.has-prefix { padding-left: 40px; }
+  .input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  .quick { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .quick button {
+    border: 1px solid var(--border); background: var(--surface-2); border-radius: 99px;
+    padding: 6px 12px; font-size: 12.5px; font-weight: 600; min-height: 34px;
+  }
+  .row { display: flex; gap: 10px; }
+  .row > * { flex: 1; min-width: 0; }
+  .preview {
+    border-radius: 10px; padding: 12px 14px; background: var(--surface-2); font-size: 13.5px; line-height: 1.5;
+    border-left: 3px solid var(--accent);
+  }
+  .preview.error { border-left-color: var(--bad); color: var(--bad-text); }
+  .help { font-size: 12px; color: var(--muted); margin-top: 6px; }
+
+  .settings-row { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+  .settings-row:last-child { border-bottom: none; }
+  .settings-row .txt { flex: 1; min-width: 0; }
+  .settings-row .t1 { font-weight: 600; font-size: 14px; }
+  .settings-row .t2 { font-size: 12.5px; color: var(--text-2); word-break: break-all; }
+
+  /* ── Toast ── */
+  #toast {
+    position: fixed; left: 50%; bottom: calc(20px + env(safe-area-inset-bottom)); transform: translate(-50%, 20px);
+    background: var(--text); color: var(--bg); border-radius: 12px; padding: 10px 10px 10px 16px;
+    display: flex; align-items: center; gap: 12px; font-size: 13.5px; opacity: 0; pointer-events: none;
+    transition: opacity .2s, transform .2s; z-index: 100; max-width: calc(100% - 32px);
+  }
+  #toast.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+  #toast button { background: none; border: none; color: var(--bg); font-weight: 700; padding: 6px 10px; text-decoration: underline; }
+
+  .footer { max-width: 1120px; margin: 4px auto 0; padding: 0 16px; font-size: 11.5px; color: var(--muted); text-align: center; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand"><div class="brand-mark" aria-hidden="true">⬡</div><span class="brand-name">ETH Monitor</span></div>
+    <span class="status-pill" id="status-pill" role="status"><span class="status-dot"></span><span id="status-text">Conectando…</span></span>
+    <div class="spacer"></div>
+    <button class="icon-btn text" id="install-btn" hidden>Instalar</button>
+    <button class="icon-btn" id="settings-btn" aria-label="Configurações">⚙︎</button>
+  </div>
+</header>
+
+<main class="page">
+  <div class="col">
+    <!-- Notification CTA -->
+    <div class="notif-cta" id="notif-cta">
+      <p><strong>Receba os alertas no celular</strong>Ative as notificações para ser avisado mesmo com o app fechado.</p>
+      <button class="btn btn-primary" id="notif-cta-btn">Ativar</button>
+    </div>
+
+    <!-- Hero -->
+    <section class="card" aria-labelledby="hero-label">
+      <div class="hero-top">
+        <span class="eyebrow" id="hero-label">Ethereum · ETH/BRL</span>
+        <span class="delta flat" id="delta-24h">—</span>
+      </div>
+      <div class="hero-price" id="price">R$ —</div>
+      <div class="hero-sub">
+        <span id="price-usd">US$ —</span>
+        <span aria-hidden="true">·</span>
+        <span id="price-updated">—</span>
+      </div>
+      <div class="summary" id="summary">Carregando resumo…</div>
+    </section>
+
+    <!-- Performance -->
+    <section class="card" aria-labelledby="perf-title">
+      <div class="period-row">
+        <h2 id="perf-title">Desempenho</h2>
+        <div class="segmented full-sm" role="group" aria-label="Período">
+          <button data-period="1D" aria-pressed="true">24h</button>
+          <button data-period="1S" aria-pressed="false">7 dias</button>
+          <button data-period="1M" aria-pressed="false">30 dias</button>
+          <button data-period="1A" aria-pressed="false">1 ano</button>
+        </div>
+      </div>
+      <div class="kpis">
+        <div class="kpi"><div class="kpi-label">Variação</div><div class="kpi-value" id="k-change">—</div><div class="kpi-hint" id="k-change-h">no período</div></div>
+        <div class="kpi"><div class="kpi-label">Mínima</div><div class="kpi-value" id="k-min">—</div><div class="kpi-hint" id="k-min-h">—</div></div>
+        <div class="kpi"><div class="kpi-label">Máxima</div><div class="kpi-value" id="k-max">—</div><div class="kpi-hint" id="k-max-h">—</div></div>
+        <div class="kpi"><div class="kpi-label">Amplitude</div><div class="kpi-value" id="k-amp">—</div><div class="kpi-hint">máx. vs mín.</div></div>
+      </div>
+      <div class="chart-wrap" id="chart-wrap">
+        <canvas id="chart" role="img" aria-label="Gráfico do preço do Ethereum no período"></canvas>
+        <div id="tooltip"><div class="tt-v"></div><div class="tt-t"></div></div>
+      </div>
+      <div class="chart-x" id="chart-x"></div>
+      <div class="chart-legend">
+        <span class="lg"><span class="lg-line"></span>Preço ETH (R$)</span>
+        <span class="lg"><span class="lg-dash"></span>Alertas ativos</span>
+      </div>
+    </section>
+  </div>
+
+  <div class="col col-right">
+    <section class="card" aria-labelledby="alerts-title">
+      <div class="alerts-head">
+        <h2 id="alerts-title">Alertas</h2>
+        <button class="btn btn-primary" id="new-alert-btn">+ Novo alerta</button>
+      </div>
+      <div class="alerts-counts" id="alerts-counts">—</div>
+      <div class="alert-list" id="alert-list"></div>
+    </section>
+  </div>
+</main>
+
+<div class="footer" id="footer">Preços: CoinGecko · atualização a cada 60 s</div>
+
+<!-- New alert dialog -->
+<dialog id="dlg-new" aria-labelledby="dlg-new-title">
+  <form method="dialog" id="form-new">
+    <div class="dlg-head">
+      <h2 id="dlg-new-title">Novo alerta</h2>
+      <button type="button" class="icon-btn" data-close aria-label="Fechar">✕</button>
+    </div>
+    <div class="dlg-body">
+      <div class="segmented" role="group" aria-label="Tipo de alerta" style="width:100%">
+        <button type="button" data-type="price" aria-pressed="true" style="flex:1">Preço alvo</button>
+        <button type="button" data-type="range" aria-pressed="false" style="flex:1">Oscilação</button>
+      </div>
+
+      <!-- Preço alvo -->
+      <div id="sec-price" class="field">
+        <label for="f-price">Avise quando o ETH chegar a</label>
+        <div class="input-wrap">
+          <span class="input-prefix">R$</span>
+          <input class="input has-prefix" id="f-price" inputmode="decimal" autocomplete="off" placeholder="0,00">
+        </div>
+        <div class="quick" id="quick-price" aria-label="Atalhos relativos ao preço atual">
+          <button type="button" data-pct="-5">−5%</button>
+          <button type="button" data-pct="-2">−2%</button>
+          <button type="button" data-pct="2">+2%</button>
+          <button type="button" data-pct="5">+5%</button>
+          <button type="button" data-pct="10">+10%</button>
+        </div>
+      </div>
+
+      <!-- Oscilação -->
+      <div id="sec-range" hidden>
+        <div class="field">
+          <div class="label">Avise se o preço variar mais de</div>
+          <div class="row">
+            <input class="input" id="f-amount" inputmode="decimal" autocomplete="off" placeholder="5" aria-label="Tamanho da variação">
+            <div class="segmented" role="group" aria-label="Unidade" style="flex:0 0 auto">
+              <button type="button" data-unit="pct" aria-pressed="true">%</button>
+              <button type="button" data-unit="brl" aria-pressed="false">R$</button>
+            </div>
+          </div>
+        </div>
+        <div class="field" style="margin-top:14px">
+          <label for="f-base">A partir de</label>
+          <div class="input-wrap">
+            <span class="input-prefix">R$</span>
+            <input class="input has-prefix" id="f-base" inputmode="decimal" autocomplete="off">
+          </div>
+          <div class="help">Preenchido com o preço atual. Você recebe um único aviso quando o preço sair da faixa, para cima ou para baixo.</div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="f-name">Nome <span style="font-weight:400;color:var(--muted)">(opcional)</span></label>
+        <input class="input" id="f-name" maxlength="40" placeholder="Ex.: Meta de venda, Stop de perda">
+      </div>
+
+      <div class="preview" id="preview" aria-live="polite">Digite um valor para ver o resumo do alerta.</div>
+
+      <div class="row">
+        <button type="button" class="btn btn-secondary" data-close>Cancelar</button>
+        <button type="submit" class="btn btn-primary" id="create-btn" disabled>Criar alerta</button>
+      </div>
+    </div>
+  </form>
+</dialog>
+
+<!-- Settings dialog -->
+<dialog id="dlg-settings" aria-labelledby="dlg-set-title">
+  <div class="dlg-head">
+    <h2 id="dlg-set-title">Configurações</h2>
+    <button type="button" class="icon-btn" data-close aria-label="Fechar">✕</button>
+  </div>
+  <div class="dlg-body" style="gap:0">
+    <div class="settings-row">
+      <div class="txt"><div class="t1">Notificações</div><div class="t2" id="set-notif">—</div></div>
+      <button class="btn btn-secondary" id="set-notif-btn">Ativar</button>
+    </div>
+    <div class="settings-row">
+      <div class="txt"><div class="t1">Testar notificação</div><div class="t2" id="set-test">Envia um aviso pelo servidor, como se fosse um alerta real.</div></div>
+      <button class="btn btn-secondary" id="set-test-btn">Enviar</button>
+    </div>
+    <div class="settings-row">
+      <div class="txt"><div class="t1">Servidor de alertas</div><div class="t2" id="set-server">—</div></div>
+    </div>
+    <div class="settings-row">
+      <div class="txt"><div class="t1">ID deste aparelho</div><div class="t2" id="set-id" style="user-select:all">—</div></div>
+      <button class="btn btn-ghost" id="set-copy">Copiar</button>
+    </div>
+  </div>
+</dialog>
+
+<div id="toast" role="status" aria-live="polite"><span id="toast-msg"></span><button id="toast-action" hidden>Desfazer</button></div>
+
+<script>
+// ═══════════════ Config ═══════════════
+const VAPID_PUBLIC = 'BJrxmGfucm9YOfhnAsz43tRvqHDOwQ4Af5enWXnVWUkeoMzxFeMcGlSnvuEJAvdLPYo89N3I9roWqxXHXG3xh6U';
+const SERVER_URL   = localStorage.getItem('eth_server_url') || 'https://monitor-criptomoeda.onrender.com';
+const CLIENT_ID    = localStorage.getItem('eth_client_id') || (() => {
+  const id = 'c_' + Math.random().toString(36).slice(2) + Date.now();
+  localStorage.setItem('eth_client_id', id); return id;
+})();
+const CG = 'https://api.coingecko.com/api/v3';
+
+// Modo demonstração: ?demo na URL, ou automático se a API de preço falhar
+let demo = new URLSearchParams(location.search).has('demo');
+
+// ═══════════════ State ═══════════════
+let alerts     = JSON.parse(localStorage.getItem('eth_alerts')     || '[]');
+let variations = JSON.parse(localStorage.getItem('eth_variations') || '[]');
+let price = null, usd = null, change24 = null, updatedAt = null;
+let period = '1D';
+const chartCache = {};  // period -> { data, ts }
+let subscription = null, swRegistration = null;
+
+// ═══════════════ Formatters ═══════════════
+const fmtBRL  = n => 'R$ ' + n.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const fmtBRL0 = n => 'R$ ' + n.toLocaleString('pt-BR', { maximumFractionDigits: 0 });
+const fmtUSD  = n => 'US$ ' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const fmtPct  = (n, sign = true) => (sign && n > 0 ? '+' : n < 0 ? '−' : '') + Math.abs(n).toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + '%';
+const fmtAxis = n => n >= 1000 ? (n / 1000).toLocaleString('pt-BR', { maximumFractionDigits: 1 }) + ' mil' : n.toFixed(0);
+const fmtDateTime = ts => new Date(ts).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' }) + ' ' +
+                          new Date(ts).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+// Aceita "15.000,00", "15000,5", "15000.50", "15.000"
+function parseBR(str) {
+  if (str == null) return NaN;
+  let s = String(str).trim().replace(/[R$\s%]/g, '');
+  if (!s) return NaN;
+  if (s.includes(',')) s = s.replace(/\./g, '').replace(',', '.');
+  else if ((s.match(/\./g) || []).length === 1 && /\.\d{1,2}$/.test(s)) { /* decimal com ponto */ }
+  else s = s.replace(/\./g, '');
+  const n = parseFloat(s);
+  return isFinite(n) ? n : NaN;
+}
+const toInputBR = n => n.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+const PERIODS = {
+  '1D': { days: 1,   label: '24h',     long: 'Nas últimas 24h' },
+  '1S': { days: 7,   label: '7 dias',  long: 'Nos últimos 7 dias' },
+  '1M': { days: 30,  label: '30 dias', long: 'Nos últimos 30 dias' },
+  '1A': { days: 365, label: '1 ano',   long: 'No último ano' }
+};
+
+// ═══════════════ Demo data ═══════════════
+const DEMO_BASE = 21480;
+function demoSeries(days) {
+  const n = days === 1 ? 288 : days === 7 ? 168 : days === 30 ? 360 : 365;
+  const step = days * 864e5 / n, now = Date.now();
+  let seed = days * 97 + 13;
+  const rnd = () => (seed = (seed * 9301 + 49297) % 233280) / 233280;
+  const raw = []; let p = 0;
+  for (let i = 0; i < n; i++) { p += (rnd() - 0.47) * Math.sqrt(days + 1) * 0.0035; raw.push(p); }
+  const shift = raw[raw.length - 1];
+  return raw.map((v, i) => [now - (n - 1 - i) * step, DEMO_BASE * Math.exp(v - shift)]);
+}
+function seedDemoAlerts() {
+  if (alerts.length || variations.length) return;
+  const t = Date.now();
+  alerts = [
+    { id: t - 5e8, price: 22800, direction: 'above', triggered: false, name: 'Meta de venda', createdPrice: 20900 },
+    { id: t - 4e8, price: 20200, direction: 'below', triggered: false, name: 'Stop de perda', createdPrice: 21600 },
+    { id: t - 3e8, price: 21300, direction: 'above', triggered: true, name: 'Recuperação', createdPrice: 20650, triggeredAt: t - 7.2e6, triggeredPrice: 21318 }
+  ];
+  variations = [
+    { id: t - 2e8, amount: DEMO_BASE * 0.05, pct: 5, basePrice: 21300, baseId: null, name: 'Oscilação forte', triggered: false, triggeredDir: null, triggeredPrice: null, createdPrice: 21300 }
+  ];
+}
+
+function enterDemo() {
+  if (demo) return;
+  demo = true;
+  seedDemoAlerts();
+  renderAll();
+}
+
+// ═══════════════ Price ═══════════════
+async function fetchJSON(url, ms = 12000) {
+  const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), ms);
+  try { const r = await fetch(url, { signal: ctl.signal }); if (!r.ok) throw new Error('HTTP ' + r.status); return await r.json(); }
+  finally { clearTimeout(t); }
+}
+
+// Demonstração automática só quando aberto como arquivo local; publicado, nunca mostra preço fictício
+const AUTO_DEMO = location.protocol === 'file:';
+let offline = false;
+
+async function fetchLivePrice() {
+  try {
+    const d = await fetchJSON(`${CG}/simple/price?ids=ethereum&vs_currencies=brl,usd&include_24hr_change=true&include_last_updated_at=true`);
+    return { brl: d.ethereum.brl, usd: d.ethereum.usd, ch: d.ethereum.brl_24h_change, ts: d.ethereum.last_updated_at * 1000 };
+  } catch (e) {
+    console.warn('CoinGecko indisponível, tentando Coinbase:', e.message);
+    const d = await fetchJSON('https://api.coinbase.com/v2/prices/ETH-BRL/spot');
+    const brl = parseFloat(d.data.amount);
+    return { brl, usd: usd && price ? usd * brl / price : null, ch: change24, ts: Date.now() };
+  }
+}
+
+async function updatePrice() {
+  if (!demo) {
+    try {
+      const d = await fetchLivePrice();
+      price = d.brl; usd = d.usd; change24 = d.ch; updatedAt = d.ts; offline = false;
+    } catch (e) {
+      console.warn('Preço indisponível:', e.message);
+      if (AUTO_DEMO && price == null) enterDemo(); else { offline = true; renderStatus(); }
+    }
+  }
+  if (demo) {
+    price = DEMO_BASE * (1 + (Math.random() - 0.5) * 0.002);
+    usd = price / 5.49; change24 = 2.37; updatedAt = Date.now();
+  }
+  if (price == null) return;
+  renderHero(); renderAlerts(); drawChart();
+  await waitState();
+  checkAlerts(price);
+}
+
+// ═══════════════ Chart data ═══════════════
+async function loadPeriod(p) {
+  const cached = chartCache[p];
+  if (cached && Date.now() - cached.ts < 5 * 60e3) return cached.data;
+  let data;
+  if (!demo) {
+    try {
+      const d = await fetchJSON(`${CG}/coins/ethereum/market_chart?vs_currency=brl&days=${PERIODS[p].days}`);
+      if (!d.prices?.length) throw new Error('sem dados');
+      data = d.prices;
+    } catch (e) {
+      console.warn('Histórico indisponível:', e.message);
+      if (AUTO_DEMO) enterDemo(); else return chartCache[p]?.data; // mantém o último carregado
+    }
+  }
+  if (demo) data = demoSeries(PERIODS[p].days);
+  chartCache[p] = { data, ts: Date.now() };
+  return data;
+}
+
+async function selectPeriod(p) {
+  period = p;
+  document.querySelectorAll('[data-period]').forEach(b => b.setAttribute('aria-pressed', b.dataset.period === p));
+  const data = await loadPeriod(p);
+  if (p !== period) return; // usuário trocou durante o carregamento
+  renderKPIs(); renderSummary(); drawChart();
+}
+
+function periodStats() {
+  const c = chartCache[period]; if (!c?.data?.length) return null;
+  const d = c.data; let min = Infinity, max = -Infinity, minT, maxT;
+  for (const [t, v] of d) { if (v < min) { min = v; minT = t; } if (v > max) { max = v; maxT = t; } }
+  const first = d[0][1], last = price ?? d[d.length - 1][1];
+  return { min, max, minT, maxT, first, last, change: (last - first) / first * 100, amp: (max - min) / min * 100 };
+}
+
+// ═══════════════ Render: hero, KPIs, summary ═══════════════
+function deltaEl(el, pct, suffix = '') {
+  if (pct == null) { el.className = 'delta flat'; el.textContent = '—'; return; }
+  const cls = pct > 0.05 ? 'up' : pct < -0.05 ? 'down' : 'flat';
+  const arrow = cls === 'up' ? '▲' : cls === 'down' ? '▼' : '■';
+  el.className = 'delta ' + cls;
+  el.textContent = `${arrow} ${fmtPct(pct)}${suffix}`;
+}
+
+function renderHero() {
+  if (price == null) return;
+  document.getElementById('price').textContent = fmtBRL(price);
+  document.getElementById('price-usd').textContent = usd ? fmtUSD(usd) : 'US$ —';
+  deltaEl(document.getElementById('delta-24h'), change24, ' em 24h');
+  renderStatus();
+  renderKPIs(); renderSummary();
+}
+
+function renderKPIs() {
+  const s = periodStats(); if (!s) return;
+  const lbl = PERIODS[period].label;
+  const kc = document.getElementById('k-change');
+  kc.textContent = fmtPct(s.change);
+  kc.className = 'kpi-value ' + (s.change > 0.05 ? 'up' : s.change < -0.05 ? 'down' : '');
+  document.getElementById('k-change-h').textContent = 'em ' + lbl;
+  document.getElementById('k-min').textContent = fmtBRL0(s.min);
+  document.getElementById('k-max').textContent = fmtBRL0(s.max);
+  const when = t => period === '1D'
+    ? new Date(t).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
+    : new Date(t).toLocaleDateString('pt-BR', { day: '2-digit', month: 'short' });
+  document.getElementById('k-min-h').textContent = when(s.minT);
+  document.getElementById('k-max-h').textContent = when(s.maxT);
+  document.getElementById('k-amp').textContent = fmtPct(s.amp, false);
+}
+
+function nearestActiveAlert() {
+  let best = null;
+  alerts.filter(a => !a.triggered).forEach(a => {
+    const d = Math.abs(a.price - price) / price * 100;
+    if (!best || d < best.d) best = { d, name: a.name || (a.direction === 'above' ? 'alvo de alta' : 'alvo de baixa') };
+  });
+  variations.filter(v => !v.triggered).forEach(v => {
+    const d = Math.min(Math.abs(v.basePrice + v.amount - price), Math.abs(price - (v.basePrice - v.amount))) / price * 100;
+    if (!best || d < best.d) best = { d, name: v.name || 'faixa de oscilação' };
+  });
+  return best;
+}
+
+function renderSummary() {
+  const s = periodStats(); if (!s || price == null) return;
+  const dir = s.change > 0.05 ? 'alta' : s.change < -0.05 ? 'queda' : 'estabilidade';
+  const fromMax = (price - s.max) / s.max * 100;
+  let txt = `${PERIODS[period].long}, o ETH teve <b>${dir}${dir === 'estabilidade' ? '' : ' de ' + fmtPct(Math.abs(s.change), false)}</b>`;
+  txt += Math.abs(fromMax) < 0.3 ? ' e está <b>na máxima</b> do período.' : ` e está <b>${fmtPct(Math.abs(fromMax), false)} abaixo da máxima</b> do período.`;
+  const n = nearestActiveAlert();
+  if (n) txt += ` Alerta mais próximo: <b>${esc(n.name)}</b>, a ${fmtPct(n.d, false)} do preço atual.`;
+  else txt += ' Nenhum alerta ativo no momento.';
+  document.getElementById('summary').innerHTML = txt;
+}
+
+function renderStatus() {
+  const pill = document.getElementById('status-pill'), t = document.getElementById('status-text');
+  pill.classList.toggle('demo', demo);
+  if (demo) { t.textContent = 'Demonstração'; }
+  else if (offline) { pill.classList.add('off'); t.textContent = 'Sem conexão · tentando de novo'; }
+  else if (updatedAt) {
+    const s = Math.max(0, Math.round((Date.now() - updatedAt) / 1000));
+    t.textContent = 'Ao vivo · ' + (s < 60 ? `há ${s} s` : `há ${Math.round(s / 60)} min`);
+    pill.classList.toggle('off', s > 300);
+  }
+  if (updatedAt) document.getElementById('price-updated').textContent =
+    'Atualizado às ' + new Date(updatedAt).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+}
+
+// ═══════════════ Chart ═══════════════
+const canvas = document.getElementById('chart');
+const tooltip = document.getElementById('tooltip');
+let chart = null;
+
+function cssVar(n) { return getComputedStyle(document.documentElement).getPropertyValue(n).trim(); }
+
+function drawChart(hoverIdx = null) {
+  const c = chartCache[period]; if (!c?.data?.length) return;
+  const ctx = canvas.getContext('2d');
+  const dpr = window.devicePixelRatio || 1;
+  const rect = canvas.getBoundingClientRect();
+  if (!rect.width) return;
+  canvas.width = rect.width * dpr; canvas.height = rect.height * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  const W = rect.width, H = rect.height, PL = 52, PR = 8, PT = 10, PB = 10;
+  const cw = W - PL - PR, ch = H - PT - PB;
+
+  const MAX = 200, step = Math.max(1, Math.floor(c.data.length / MAX));
+  const pts = c.data.filter((_, i) => i % step === 0 || i === c.data.length - 1);
+  const vals = pts.map(p => p[1]);
+  let lo = Math.min(...vals), hi = Math.max(...vals);
+  const span0 = hi - lo || 1;
+
+  // Linhas de alerta ativas que caem perto da escala (até 60% além dela)
+  const lines = [];
+  alerts.filter(a => !a.triggered).forEach(a => lines.push({ v: a.price, lbl: (a.direction === 'above' ? '▲ ' : '▼ ') + fmtAxis(a.price) }));
+  variations.filter(v => !v.triggered).forEach(v => {
+    lines.push({ v: v.basePrice + v.amount, lbl: '↥ ' + fmtAxis(v.basePrice + v.amount) });
+    lines.push({ v: v.basePrice - v.amount, lbl: '↧ ' + fmtAxis(v.basePrice - v.amount) });
+  });
+  const visibleLines = lines.filter(l => l.v > lo - span0 * 0.6 && l.v < hi + span0 * 0.6);
+  visibleLines.forEach(l => { lo = Math.min(lo, l.v); hi = Math.max(hi, l.v); });
+  const pad = (hi - lo) * 0.06 || 1; lo -= pad; hi += pad;
+
+  const X = i => PL + (i / (pts.length - 1)) * cw;
+  const Y = v => PT + (1 - (v - lo) / (hi - lo)) * ch;
+  const accent = cssVar('--accent'), border = cssVar('--border'), muted = cssVar('--muted'), text2 = cssVar('--text-2'), surface = cssVar('--surface');
+
+  ctx.clearRect(0, 0, W, H);
+  // Grid + y labels
+  ctx.font = '11px Inter, system-ui, sans-serif'; ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+  for (let k = 0; k <= 4; k++) {
+    const v = lo + (hi - lo) * (k / 4), y = Y(v);
+    ctx.strokeStyle = border; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(PL, y); ctx.lineTo(W - PR, y); ctx.stroke();
+    ctx.fillStyle = muted; ctx.fillText(fmtAxis(v), PL - 8, y);
+  }
+  // Area
+  const grad = ctx.createLinearGradient(0, PT, 0, H - PB);
+  grad.addColorStop(0, accent + '33'); grad.addColorStop(1, accent + '00');
+  ctx.beginPath(); ctx.moveTo(X(0), H - PB);
+  vals.forEach((v, i) => ctx.lineTo(X(i), Y(v)));
+  ctx.lineTo(X(vals.length - 1), H - PB); ctx.closePath(); ctx.fillStyle = grad; ctx.fill();
+  // Alert lines
+  ctx.setLineDash([5, 4]); ctx.lineWidth = 1.5; ctx.textAlign = 'right'; ctx.textBaseline = 'bottom'; ctx.font = '600 10.5px Inter, system-ui, sans-serif';
+  // Rótulos sem sobreposição: linhas muito próximas compartilham um rótulo empilhado
+  let lastLabelY = -Infinity;
+  visibleLines.map(l => ({ ...l, y: Y(l.v) })).sort((a, b) => a.y - b.y).forEach(l => {
+    ctx.strokeStyle = text2; ctx.beginPath(); ctx.moveTo(PL, l.y); ctx.lineTo(W - PR, l.y); ctx.stroke();
+    let ly = Math.max(l.y - 3, lastLabelY + 13);
+    if (ly > H - PB) return;
+    const tw = ctx.measureText(l.lbl).width;
+    ctx.fillStyle = surface; ctx.fillRect(W - PR - tw - 6, ly - 12, tw + 6, 13);
+    ctx.fillStyle = text2; ctx.font = '600 10.5px Inter, system-ui, sans-serif'; ctx.fillText(l.lbl, W - PR - 2, ly);
+    lastLabelY = ly;
+  });
+  ctx.setLineDash([]);
+  // Line
+  ctx.beginPath(); vals.forEach((v, i) => i ? ctx.lineTo(X(i), Y(v)) : ctx.moveTo(X(i), Y(v)));
+  ctx.strokeStyle = accent; ctx.lineWidth = 2; ctx.lineJoin = 'round'; ctx.stroke();
+  // End marker
+  const ex = X(vals.length - 1), ey = Y(vals[vals.length - 1]);
+  ctx.beginPath(); ctx.arc(ex, ey, 5, 0, Math.PI * 2); ctx.fillStyle = accent; ctx.fill();
+  ctx.lineWidth = 2; ctx.strokeStyle = surface; ctx.stroke();
+  // Hover
+  if (hoverIdx != null) {
+    const hx = X(hoverIdx), hy = Y(vals[hoverIdx]);
+    ctx.strokeStyle = muted; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(hx, PT); ctx.lineTo(hx, H - PB); ctx.stroke();
+    ctx.beginPath(); ctx.arc(hx, hy, 5, 0, Math.PI * 2); ctx.fillStyle = accent; ctx.fill(); ctx.strokeStyle = surface; ctx.lineWidth = 2; ctx.stroke();
+  }
+  chart = { pts, vals, X, Y, W, PL, PR };
+
+  // X labels
+  const n = 5, times = pts.map(p => p[0]);
+  document.getElementById('chart-x').innerHTML = Array.from({ length: n }, (_, i) => {
+    const d = new Date(times[Math.round(i / (n - 1) * (times.length - 1))]);
+    const s = period === '1D' ? d.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
+            : period === '1A' ? d.toLocaleDateString('pt-BR', { month: 'short', year: '2-digit' })
+            : d.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
+    return `<span>${s}</span>`;
+  }).join('');
+}
+
+function onHover(e) {
+  if (!chart) return;
+  const r = canvas.getBoundingClientRect();
+  const cx = (e.touches ? e.touches[0].clientX : e.clientX) - r.left;
+  const { pts, vals, X, Y, W, PL, PR } = chart;
+  const i = Math.max(0, Math.min(vals.length - 1, Math.round((cx - PL) / (W - PL - PR) * (vals.length - 1))));
+  drawChart(i);
+  const d = new Date(pts[i][0]);
+  tooltip.querySelector('.tt-v').textContent = fmtBRL(vals[i]);
+  tooltip.querySelector('.tt-t').textContent = period === '1D'
+    ? d.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })
+    : d.toLocaleDateString('pt-BR', { day: '2-digit', month: 'short', year: period === '1A' ? 'numeric' : undefined }) +
+      (period === '1S' ? ' ' + d.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }) : '');
+  const tw = tooltip.offsetWidth, px = X(i), py = Y(vals[i]);
+  let left = px - tw / 2; left = Math.max(0, Math.min(W - tw, left));
+  let top = py - tooltip.offsetHeight - 12; if (top < 0) top = py + 12;
+  tooltip.style.left = left + 'px'; tooltip.style.top = top + 'px';
+  tooltip.classList.add('visible');
+}
+function offHover() { tooltip.classList.remove('visible'); drawChart(); }
+canvas.addEventListener('mousemove', onHover);
+canvas.addEventListener('mouseleave', offHover);
+canvas.addEventListener('touchstart', onHover, { passive: true });
+canvas.addEventListener('touchmove', onHover, { passive: true });
+canvas.addEventListener('touchend', () => setTimeout(offHover, 1500));
+window.addEventListener('resize', () => drawChart());
+document.querySelectorAll('[data-period]').forEach(b => b.addEventListener('click', () => selectPeriod(b.dataset.period)));
+
+// ═══════════════ Alerts: render ═══════════════
+function persistLocal() {
+  if (demo && !localStorage.getItem('eth_alerts')) return; // não grava dados fictícios
+  localStorage.setItem('eth_alerts', JSON.stringify(alerts));
+  localStorage.setItem('eth_variations', JSON.stringify(variations));
+}
+function commit() { persistLocal(); renderAll(); syncServer(); }
+
+function alertView(a) {
+  const up = a.direction === 'above';
+  const title = a.name || (up ? 'Alvo de alta' : 'Alvo de baixa');
+  let meta, progress = 0, chip;
+  if (a.triggered) {
+    chip = `<span class="chip ${up ? 'hit-up' : 'hit-down'}">✓ Disparado</span>`;
+    meta = `Atingido${a.triggeredPrice ? ' a ' + fmtBRL(a.triggeredPrice) : ''}${a.triggeredAt ? ' em ' + fmtDateTime(a.triggeredAt) : ''}`;
+  } else {
+    chip = `<span class="chip active">● Ativo</span>`;
+    if (price != null) {
+      const diff = a.price - price, pct = diff / price * 100;
+      meta = `Faltam <b>${fmtBRL(Math.abs(diff))}</b> (${fmtPct(pct)}) · aviso quando ${up ? 'subir até' : 'cair até'} o alvo`;
+      const start = a.createdPrice ?? price;
+      progress = a.price === start ? 0 : Math.max(0, Math.min(1, (price - start) / (a.price - start)));
+    } else meta = '—';
+  }
+  return { sortKey: a.triggered ? 1e9 - (a.triggeredAt || 0) / 1e6 : (price ? Math.abs(a.price - price) / price : 0),
+    html: `<article class="alert${a.triggered ? ' done' : ''}">
+      <div class="alert-row">
+        <div class="alert-icon ${up ? 'up' : 'down'}" aria-hidden="true">${up ? '▲' : '▼'}</div>
+        <div class="alert-main"><div class="alert-title">${esc(title)}</div><div class="alert-value">${fmtBRL(a.price)}</div></div>
+        ${chip}
+      </div>
+      <div class="progress" role="progressbar" aria-label="Proximidade do alvo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(progress * 100)}"><span style="width:${(progress * 100).toFixed(0)}%"></span></div>
+      <div class="alert-meta">${meta}</div>
+      <div class="alert-actions">
+        ${a.triggered ? `<button class="btn btn-ghost" data-act="reactivate" data-kind="alert" data-id="${a.id}">↻ Reativar</button>` : ''}
+        <button class="btn btn-danger-ghost" data-act="delete" data-kind="alert" data-id="${a.id}">Excluir</button>
+      </div>
+    </article>` };
+}
+
+function rangeView(v) {
+  const low = v.basePrice - v.amount, high = v.basePrice + v.amount;
+  const width = v.pct ? `±${v.pct.toLocaleString('pt-BR')}%` : `±${fmtBRL0(v.amount)}`;
+  const title = v.name || `Oscilação ${width}`;
+  let meta, progress = 0, chip;
+  if (v.triggered) {
+    const up = v.triggeredDir === 'above';
+    chip = `<span class="chip ${up ? 'hit-up' : 'hit-down'}">✓ Rompeu ${up ? 'p/ cima' : 'p/ baixo'}</span>`;
+    meta = `Saiu da faixa${v.triggeredPrice ? ' a ' + fmtBRL(v.triggeredPrice) : ''}${v.triggeredAt ? ' em ' + fmtDateTime(v.triggeredAt) : ''}`;
+  } else {
+    chip = `<span class="chip active">● Ativo</span>`;
+    if (price != null) {
+      const toHigh = high - price, toLow = price - low, m = Math.min(toHigh, toLow);
+      meta = `Margem até o limite ${toHigh < toLow ? 'superior' : 'inferior'}: <b>${fmtBRL(Math.max(0, m))}</b> (${fmtPct(m / price * 100, false)}) · base ${fmtBRL0(v.basePrice)}`;
+      progress = Math.max(0, Math.min(1, 1 - m / v.amount));
+    } else meta = '—';
+  }
+  return { sortKey: v.triggered ? 1e9 - (v.triggeredAt || 0) / 1e6 : (price ? Math.min(Math.abs(high - price), Math.abs(price - low)) / price : 0),
+    html: `<article class="alert${v.triggered ? ' done' : ''}">
+      <div class="alert-row">
+        <div class="alert-icon range" aria-hidden="true">↕</div>
+        <div class="alert-main"><div class="alert-title">${esc(title)}</div><div class="alert-value">${fmtBRL0(low)} – ${fmtBRL0(high)}</div></div>
+        ${chip}
+      </div>
+      <div class="progress" role="progressbar" aria-label="Proximidade do limite" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(progress * 100)}"><span style="width:${(progress * 100).toFixed(0)}%"></span></div>
+      <div class="alert-meta">${meta}</div>
+      <div class="alert-actions">
+        ${v.triggered ? `<button class="btn btn-ghost" data-act="reactivate" data-kind="variation" data-id="${v.id}">↻ Reativar</button>` : ''}
+        <button class="btn btn-danger-ghost" data-act="delete" data-kind="variation" data-id="${v.id}">Excluir</button>
+      </div>
+    </article>` };
+}
+
+function renderAlerts() {
+  const views = [...alerts.map(alertView), ...variations.map(rangeView)].sort((a, b) => a.sortKey - b.sortKey);
+  const active = alerts.filter(a => !a.triggered).length + variations.filter(v => !v.triggered).length;
+  const done = alerts.length + variations.length - active;
+  document.getElementById('alerts-counts').textContent = views.length
+    ? `${active} ativo${active === 1 ? '' : 's'} · ${done} disparado${done === 1 ? '' : 's'} · ordenados pelo mais próximo`
+    : 'Nenhum alerta ainda';
+  document.getElementById('alert-list').innerHTML = views.length ? views.map(v => v.html).join('') :
+    `<div class="empty"><strong>Sem alertas configurados</strong>Crie um alerta de preço alvo ou de oscilação para ser avisado automaticamente.</div>`;
+}
+
+function renderAll() { renderStatus(); renderHero(); renderAlerts(); renderSummary(); drawChart(); }
+
+// ═══════════════ Alerts: actions ═══════════════
+document.getElementById('alert-list').addEventListener('click', e => {
+  const b = e.target.closest('[data-act]'); if (!b) return;
+  const list = b.dataset.kind === 'variation' ? variations : alerts;
+  const idx = list.findIndex(x => x.id === +b.dataset.id); if (idx < 0) return;
+  if (b.dataset.act === 'delete') {
+    const [removed] = list.splice(idx, 1);
+    commit();
+    toast('Alerta excluído', () => { list.splice(idx, 0, removed); commit(); });
+  }
+  if (b.dataset.act === 'reactivate') {
+    if (price == null) return;
+    const it = list[idx];
+    // Novo id: o servidor trata como alerta novo (não herda o "disparado")
+    const fresh = { ...it, id: Date.now(), triggered: false, triggeredAt: null, triggeredPrice: null, triggeredDir: null, createdPrice: price };
+    if (b.dataset.kind === 'alert') {
+      if (Math.abs(it.price - price) / price < 0.001) { toast('O preço atual já está no alvo — ajuste o valor.'); return; }
+      fresh.direction = it.price >= price ? 'above' : 'below';
+    } else {
+      fresh.basePrice = price;
+      if (it.pct) fresh.amount = price * it.pct / 100;
+    }
+    list[idx] = fresh;
+    commit();
+    toast('Alerta reativado');
+  }
+});
+
+// ═══════════════ New alert dialog ═══════════════
+const dlgNew = document.getElementById('dlg-new');
+const form = { type: 'price', unit: 'pct' };
+const $ = id => document.getElementById(id);
+
+function openNew() {
+  if (price == null) { toast('Aguarde o preço carregar'); return; }
+  $('f-price').value = ''; $('f-amount').value = ''; $('f-name').value = '';
+  $('f-base').value = toInputBR(price);
+  setType('price'); updatePreview();
+  dlgNew.showModal();
+  setTimeout(() => $('f-price').focus(), 50);
+}
+function setType(t) {
+  form.type = t;
+  dlgNew.querySelectorAll('[data-type]').forEach(b => b.setAttribute('aria-pressed', b.dataset.type === t));
+  $('sec-price').hidden = t !== 'price'; $('sec-range').hidden = t !== 'range';
+  updatePreview();
+}
+function setUnit(u) {
+  form.unit = u;
+  dlgNew.querySelectorAll('[data-unit]').forEach(b => b.setAttribute('aria-pressed', b.dataset.unit === u));
+  $('f-amount').placeholder = u === 'pct' ? '5' : '1.000,00';
+  updatePreview();
+}
+
+function readForm() {
+  const name = $('f-name').value.trim();
+  if (form.type === 'price') {
+    const target = parseBR($('f-price').value);
+    if (!(target > 0)) return { error: null };
+    const pct = (target - price) / price * 100;
+    if (Math.abs(pct) < 0.1) return { error: 'O alvo está praticamente igual ao preço atual. Escolha um valor mais distante.' };
+    const up = target > price;
+    return { ok: true, name, target, up,
+      text: `Você será avisado quando o ETH <b>${up ? 'subir' : 'cair'} até ${fmtBRL(target)}</b> — ${fmtPct(Math.abs(pct), false)} ${up ? 'acima' : 'abaixo'} do preço atual (${fmtBRL(price)}).` };
+  }
+  const amt = parseBR($('f-amount').value), base = parseBR($('f-base').value);
+  if (!(amt > 0) || !(base > 0)) return { error: null };
+  const amount = form.unit === 'pct' ? base * amt / 100 : amt;
+  if (form.unit === 'pct' && amt >= 100) return { error: 'Use uma variação menor que 100%.' };
+  const low = base - amount, high = base + amount;
+  if (price <= low || price >= high) return { error: `O preço atual (${fmtBRL0(price)}) já está fora dessa faixa — o alerta dispararia na hora. Ajuste a base ou a variação.` };
+  return { ok: true, name, amount, base, pct: form.unit === 'pct' ? amt : null,
+    text: `Um único aviso quando o ETH <b>sair da faixa ${fmtBRL0(low)} – ${fmtBRL0(high)}</b> (${form.unit === 'pct' ? '±' + amt.toLocaleString('pt-BR') + '%' : '±' + fmtBRL0(amount)} em torno de ${fmtBRL0(base)}), para cima ou para baixo.` };
+}
+
+function updatePreview() {
+  const r = readForm(), el = $('preview');
+  el.classList.toggle('error', !!r.error);
+  el.innerHTML = r.ok ? r.text : r.error || 'Digite um valor para ver o resumo do alerta.';
+  $('create-btn').disabled = !r.ok;
+}
+
+dlgNew.querySelectorAll('[data-type]').forEach(b => b.addEventListener('click', () => setType(b.dataset.type)));
+dlgNew.querySelectorAll('[data-unit]').forEach(b => b.addEventListener('click', () => setUnit(b.dataset.unit)));
+dlgNew.querySelectorAll('input').forEach(i => i.addEventListener('input', updatePreview));
+['f-price', 'f-base'].forEach(id => $(id).addEventListener('blur', e => {
+  const n = parseBR(e.target.value); if (n > 0) e.target.value = toInputBR(n);
+}));
+$('quick-price').addEventListener('click', e => {
+  const b = e.target.closest('[data-pct]'); if (!b) return;
+  $('f-price').value = toInputBR(Math.round(price * (1 + +b.dataset.pct / 100)));
+  updatePreview();
+});
+document.querySelectorAll('[data-close]').forEach(b => b.addEventListener('click', () => b.closest('dialog').close()));
+document.querySelectorAll('dialog').forEach(d => d.addEventListener('click', e => { if (e.target === d) d.close(); }));
+$('new-alert-btn').addEventListener('click', openNew);
+
+$('form-new').addEventListener('submit', e => {
+  e.preventDefault();
+  const r = readForm(); if (!r.ok) return;
+  const id = Date.now();
+  if (form.type === 'price') {
+    alerts.push({ id, price: r.target, direction: r.up ? 'above' : 'below', triggered: false, name: r.name, createdPrice: price });
+  } else {
+    variations.push({ id, amount: r.amount, pct: r.pct, basePrice: r.base, baseId: null, name: r.name,
+      triggered: false, triggeredDir: null, triggeredPrice: null, createdPrice: price });
+  }
+  if (demo && !localStorage.getItem('eth_alerts')) localStorage.setItem('eth_alerts', '[]'); // passa a gravar
+  commit();
+  dlgNew.close();
+  toast('Alerta criado');
+  if ('Notification' in window && Notification.permission !== 'granted') $('notif-cta').classList.add('show');
+});
+
+// ═══════════════ Alert check + local notification ═══════════════
+function notifyLocal(title, body, tag) {
+  if (!('Notification' in window) || Notification.permission !== 'granted') return;
+  getActiveReg().then(reg => reg.showNotification(title, { body, tag, vibrate: [200, 100, 200] }))
+    .catch(e => console.warn('Notificação local falhou:', e.message));
+}
+const fmtPush = n => n.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+
+function checkAlerts(p) {
+  let changed = false;
+  alerts.forEach(a => {
+    if (a.triggered) return;
+    const hit = (a.direction === 'above' && p >= a.price) || (a.direction === 'below' && p <= a.price);
+    if (!hit) return;
+    Object.assign(a, { triggered: true, triggeredAt: Date.now(), triggeredPrice: p }); changed = true;
+    notifyLocal(`🚨 ETH ${a.direction === 'above' ? '📈' : '📉'} ${a.name || 'Alerta atingido!'}`,
+      `Ethereum R$ ${fmtPush(p)} — ${a.direction === 'above' ? 'acima de' : 'abaixo de'} R$ ${a.price.toLocaleString('pt-BR')}`, 'alert-' + a.id);
+  });
+  variations.forEach(v => {
+    if (v.triggered) return;
+    const hi = v.basePrice + v.amount, lo = v.basePrice - v.amount;
+    if (p < hi && p > lo) return;
+    const up = p >= hi;
+    Object.assign(v, { triggered: true, triggeredDir: up ? 'above' : 'below', triggeredPrice: p, triggeredAt: Date.now() }); changed = true;
+    notifyLocal(`🚨 ETH ${up ? '📈' : '📉'} ${v.name || 'Faixa rompida!'}`,
+      `Ethereum R$ ${fmtPush(p)} — saiu ${up ? 'acima' : 'abaixo'} da faixa (limite: R$ ${(up ? hi : lo).toLocaleString('pt-BR')})`, 'var-' + v.id);
+  });
+  if (changed) commit();
+}
+
+function applyTriggered(kind, id, extra = {}) {
+  const item = (kind === 'variation' ? variations : alerts).find(x => x.id === id);
+  if (!item || item.triggered) return false;
+  Object.assign(item, { triggered: true, triggeredAt: Date.now() }, extra);
+  return true;
+}
+function applyServerState(d) {
+  let ch = false;
+  (d.alerts || []).forEach(s => { if (s.triggered && applyTriggered('alert', s.id)) ch = true; });
+  (d.variations || []).forEach(s => { if (s.triggered && applyTriggered('variation', s.id, { triggeredDir: s.triggeredDir, triggeredPrice: s.triggeredPrice })) ch = true; });
+  if (ch) { persistLocal(); renderAll(); }
+}
+
+// ═══════════════ Push ═══════════════
+function b64ToUint8(b64) {
+  const pad = '='.repeat((4 - b64.length % 4) % 4);
+  const b = atob((b64 + pad).replace(/-/g, '+').replace(/_/g, '/'));
+  return Uint8Array.from([...b].map(c => c.charCodeAt(0)));
+}
+async function getActiveReg() {
+  if (swRegistration?.active) return swRegistration;
+  return navigator.serviceWorker.ready;
+}
+function sameKey(buf, key) {
+  if (!buf) return true;
+  const cur = new Uint8Array(buf);
+  return cur.length === key.length && cur.every((b, i) => b === key[i]);
+}
+async function setupPush() {
+  if (!('PushManager' in window)) {
+    toast('Este navegador não recebe push. No iPhone, instale o app na Tela de Início.'); return false;
+  }
+  try {
+    const reg = await getActiveReg(), key = b64ToUint8(VAPID_PUBLIC);
+    let sub = await reg.pushManager.getSubscription();
+    if (sub && !sameKey(sub.options?.applicationServerKey, key)) { await sub.unsubscribe(); sub = null; }
+    if (!sub) sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: key });
+    subscription = sub;
+    await syncServer();
+    return true;
+  } catch (e) { console.error('setupPush falhou:', e); toast('Não foi possível ativar: ' + e.message); return false; }
+}
+async function renewPush() {
+  const reg = await getActiveReg();
+  const old = await reg.pushManager.getSubscription(); if (old) await old.unsubscribe();
+  subscription = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64ToUint8(VAPID_PUBLIC) });
+}
+async function syncServer(retry = true) {
+  if (!SERVER_URL || !subscription || demo) return;
+  try {
+    const r = await fetch(SERVER_URL + '/subscribe', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ subscription, clientId: CLIENT_ID, alerts, variations })
+    });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const d = await r.json();
+    if (d.resubscribe && retry) { await renewPush(); return syncServer(false); }
+    applyServerState(d);
+  } catch (e) { console.warn('syncServer falhou:', e.message); }
+}
+
+async function enableNotifications() {
+  if (!('Notification' in window)) { toast('Notificações não suportadas neste navegador.'); return; }
+  const perm = await Notification.requestPermission();
+  if (perm !== 'granted') { toast('Permissão negada. Libere nas configurações do navegador.'); renderNotif(); return; }
+  if (await setupPush()) toast('Notificações ativadas');
+  renderNotif();
+}
+function renderNotif() {
+  const supported = 'Notification' in window, granted = supported && Notification.permission === 'granted';
+  $('notif-cta').classList.toggle('show', supported && !granted && (alerts.length + variations.length) > 0);
+  $('set-notif').textContent = !supported ? 'Não suportadas neste navegador'
+    : granted ? 'Ativadas neste aparelho' : Notification.permission === 'denied' ? 'Bloqueadas — libere nas configurações do navegador' : 'Desativadas';
+  $('set-notif-btn').textContent = granted ? 'Renovar' : 'Ativar';
+  $('set-notif-btn').disabled = !supported || Notification.permission === 'denied';
+}
+$('notif-cta-btn').addEventListener('click', enableNotifications);
+$('set-notif-btn').addEventListener('click', async () => {
+  if (Notification.permission === 'granted') {
+    try { await renewPush(); await syncServer(false); toast('Notificações renovadas'); } catch (e) { toast('Falha ao renovar: ' + e.message); }
+  } else await enableNotifications();
+});
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const stateReady = (async () => {
+  if (!('serviceWorker' in navigator) || location.protocol === 'file:') return;
+  try { swRegistration = await navigator.serviceWorker.register('./sw.js'); } catch (e) { console.warn('SW:', e.message); return; }
+  if ('Notification' in window && Notification.permission === 'granted') await setupPush();
+})();
+const waitState = () => Promise.race([stateReady, sleep(10000)]);
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.addEventListener('message', e => {
+    const d = e.data || {}; if (d.type !== 'triggered') return;
+    const extra = d.kind === 'variation' ? { triggeredDir: d.direction, triggeredPrice: d.price } : { triggeredPrice: d.price };
+    if (applyTriggered(d.kind, d.id, extra)) { persistLocal(); renderAll(); }
+  });
+}
+document.addEventListener('visibilitychange', async () => {
+  if (document.visibilityState !== 'visible') return;
+  await Promise.race([syncServer(), sleep(8000)]);
+  updatePrice();
+});
+
+// ═══════════════ Settings ═══════════════
+const dlgSet = $('dlg-settings');
+$('settings-btn').addEventListener('click', async () => {
+  renderNotif();
+  $('set-id').textContent = CLIENT_ID;
+  $('set-server').textContent = 'Verificando…';
+  dlgSet.showModal();
+  if (demo) { $('set-server').textContent = 'Modo demonstração — servidor não utilizado'; return; }
+  try {
+    const d = await fetchJSON(SERVER_URL + '/', 15000);
+    const ago = d.secondsSinceLastCheck;
+    $('set-server').textContent = `Online · ${ago != null ? 'última verificação há ' + (ago < 90 ? ago + ' s' : Math.round(ago / 60) + ' min') : 'aguardando 1ª verificação'}` +
+      (d.lastError && !d.lastPrice ? ' · erro: ' + d.lastError : '');
+  } catch { $('set-server').textContent = 'Indisponível no momento (pode estar iniciando — tente em 1 min)'; }
+});
+$('set-copy').addEventListener('click', () => navigator.clipboard?.writeText(CLIENT_ID).then(() => toast('ID copiado')));
+$('set-test-btn').addEventListener('click', async () => {
+  if (demo) { $('set-test').textContent = 'Indisponível no modo demonstração.'; return; }
+  $('set-test').textContent = 'Enviando…';
+  try {
+    const r = await fetch(`${SERVER_URL}/test-push/${CLIENT_ID}`); const d = await r.json();
+    $('set-test').textContent = r.ok ? '✓ Enviado — a notificação deve aparecer em instantes.' : '⚠︎ ' + (d.error || 'Falhou');
+  } catch (e) { $('set-test').textContent = '⚠︎ Servidor indisponível: ' + e.message; }
+});
+
+// ═══════════════ Toast ═══════════════
+let toastTimer;
+function toast(msg, undo) {
+  const t = $('toast'), a = $('toast-action');
+  $('toast-msg').textContent = msg;
+  a.hidden = !undo; a.onclick = () => { undo(); t.classList.remove('show'); };
+  t.classList.add('show'); clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), undo ? 6000 : 3000);
+}
+
+// ═══════════════ Install ═══════════════
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; $('install-btn').hidden = false; });
+$('install-btn').addEventListener('click', () => { deferredPrompt?.prompt(); deferredPrompt = null; $('install-btn').hidden = true; });
+
+// ═══════════════ Init ═══════════════
+if (demo) seedDemoAlerts();
+renderAlerts(); renderNotif();
+updatePrice().then(() => selectPeriod('1D'));
+setInterval(updatePrice, 60e3);
+setInterval(renderStatus, 5e3);
+</script>
+</body>
+</html>

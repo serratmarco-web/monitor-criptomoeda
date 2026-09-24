@@ -1,0 +1,15 @@
+{
+  "name": "eth-monitor-backend",
+  "version": "1.0.0",
+  "description": "ETH price alert backend with web push",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^2.7.0",
+    "web-push": "^3.6.7"
+  }
+}
